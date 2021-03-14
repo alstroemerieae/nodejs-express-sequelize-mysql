@@ -5,7 +5,7 @@
 - Node.js
 - Express
 - Sequelize
-- MySQL
+- PostgreSQL
 
 ## Requirements
 - [Node](https://nodejs.org/en/download/)
@@ -13,9 +13,9 @@
 ## Install
 
 ```
-git clone https://github.com/alstroemerieae/nodejs-express-sequelize-mysql.git
+git clone https://github.com/alstroemerieae/alkemy-challenge-backend.git
 
-cd nodejs-express-sequelize-mysql
+cd alkemy-challenge-backend
 
 npm install
 

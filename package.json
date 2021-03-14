@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-express-sequelize-mysql",
+  "name": "alkemy-challenge-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
