@@ -131,7 +131,7 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-// Find all published Operations
+// Find all income Operations
 exports.findAllIncomes = (req, res) => {
   Operation.findAll({ where: { "operation": "income" } })
     .then(data => {
@@ -145,7 +145,7 @@ exports.findAllIncomes = (req, res) => {
     });
 };
 
-// Find all published Operations
+// Find all expense Operations
 exports.findAllExpenses = (req, res) => {
   Operation.findAll({ where: { "operation": "expense" } })
     .then(data => {
