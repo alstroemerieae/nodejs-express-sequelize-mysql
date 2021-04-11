@@ -6,9 +6,10 @@ const app = express();
 
 const db = require("./app/models");
 db.sequelize.sync({ force: true }).then(() => {
-  console.log("Drop and re-sync db.");
+  console.log("Check http://localhost:8080/api/operations");
 });
 
+// Set server to port 8081
 var corsOptions = {
   origin: "http://localhost:8081"
 };
@@ -24,7 +25,7 @@ app.get("/", (req, res) => {
 });
 require("./app/routes/operation.routes")(app);
 
-// set port, listen for requests
+// Set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
