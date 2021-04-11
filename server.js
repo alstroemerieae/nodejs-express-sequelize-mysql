@@ -13,20 +13,15 @@ var corsOptions = {
   origin: "http://localhost:8081"
 };
 
+// Middleware
 app.use(cors(corsOptions));
+app.use(json());
+app.use(urlencoded({ extended: true }));
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
-
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// simple route
+// Routes
 app.get("/", (req, res) => {
   res.json({ message: "App is working. Check http://localhost:8080/api/operations" });
 });
-
-// include routes
 require("./app/routes/operation.routes")(app);
 
 // set port, listen for requests
